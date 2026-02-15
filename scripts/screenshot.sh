@@ -1,19 +1,19 @@
 #!/bin/sh
 
 DATE=$(date +%y-%m)
+TIME=$(date +%d-%H%M)
+
 BASE_DIR="$HOME/Pictures/Screenshots"
 DIRECTORY="$BASE_DIR/$DATE"
+FILENAME="$DIRECTORY/$TIME.png"
 
-makeDateFolder() {
-    if [ ! -d "$DIRECTORY" ]; then 
-	mkdir -p "$DIRECTORY"
-    fi
-}
+mkdir -p "$DIRECTORY"
 
-makeScreenshot() {
-    grim -t png -l 0 "$DIRECTORY/screen-$(date +%d-%H%M).png"
-}
+if [ "$1" = "region" ]; then
+    grim -g "$(slurp)" -t png -l 0 "$FILENAME"
+else
+    grim -t png -l 0 "$FILENAME"
+fi
 
-makeDateFolder
-makeScreenshot
-
+wl-copy <"$FILENAME"
+notify-send "Screenshot saved!" "$FILENAME"

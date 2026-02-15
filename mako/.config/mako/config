@@ -1,0 +1,10 @@
+# duration in milliseconds
+default-timeout=5000
+
+# max number of notifications shown at once
+max-visible=5
+
+# positioning
+anchor=top-right
+margin=10
+
