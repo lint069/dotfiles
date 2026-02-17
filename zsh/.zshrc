@@ -15,6 +15,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -l"
 alias lla="ls -la"
-alias lsi="exa --icons"
+alias init0="poweroff"
 
 fastfetch
