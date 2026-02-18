@@ -8,7 +8,6 @@ A minimal, arch based Hyprland rice.
 
 - [Arch Linux](https://archlinux.org/)
 - [Hyprland](https://hypr.land/)
-- [GNU Stow](https://www.gnu.org/software/stow/)
 
 ## Authors
 

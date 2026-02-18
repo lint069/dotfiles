@@ -1,0 +1,61 @@
+@import "colors.css";
+
+/* everything */
+* {
+    font-family: "Geist Mono", monospace;
+    font-size: 16px;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 10;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* background */
+window#waybar {
+    border-radius: 3px;
+    background-color: @bar-background;
+}
+
+#workspaces button {
+    color: @inactive-element;
+    padding: 0 8px;
+    transition: 0.35s ease;
+}
+
+#workspaces button.active {
+    color: @active-element;
+}
+
+/* current window */
+#window {
+    color: @active-element;
+}
+
+#clock,
+#battery {
+    color: @active-element;
+    padding: 0 10px;
+}
+
+#clock {
+    margin-right: 10px;
+}
+
+/* Battery states */
+#battery.charging {
+    color: @battery-charging;
+}
+
+#battery.warning {
+    color: @battery-warning;
+}
+
+#battery.critical {
+    color: @battery-critical;
+}

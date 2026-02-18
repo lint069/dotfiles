@@ -1,6 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="bureau"
+ZSH_THEME="random"
+ZSH_THEME_RANDOM_CANDIDATES=(
+    "af-magic"
+    "gentoo"
+    "nicoulaj"
+)
 
 plugins=(
 	git
