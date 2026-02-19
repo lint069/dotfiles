@@ -8,12 +8,12 @@
 
 
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 10;
+    margin-left: 10px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 /* background */
@@ -37,13 +37,14 @@ window#waybar {
     color: @active-element;
 }
 
-#clock,
 #battery {
     color: @active-element;
-    padding: 0 10px;
+    padding: 0 20px;
+    font-size: 13px;
 }
 
 #clock {
+    color: @active-element;
     margin-right: 10px;
 }
 

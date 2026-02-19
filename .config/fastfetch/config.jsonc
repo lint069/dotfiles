@@ -1,0 +1,58 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+    "modules": [
+        "title",
+        "separator",
+        "os",
+        "kernel",
+        "uptime",
+        "packages",
+        "shell",
+        "de",
+        "wm",
+        "wmtheme",
+        "theme",
+        "icons",
+        "font",
+        "terminal",
+        "memory",
+        "disk",
+        "localip",
+        "battery",
+        "poweradapter",
+        "locale",
+        "break",
+        "colors"
+    ],
+
+    "logo": {
+        "type": "auto",
+        "source": "~/dotfiles/.config/fastfetch/assets/tux.txt",
+        "color": {
+            "1": "#ababec",
+        },
+    },
+
+    "display": {
+        "separator": ": ",     // Separator between keys and values
+        "color": {
+            "keys": "#ababec",    // Key color
+            "title": "#ababec"     // Title color
+        },
+        "bar": {
+            "width": 10,       // Width of percentage bars
+            "char": {
+                "elapsed": "■", // Character for elapsed portion
+                "total": "-",    // Character for total portion
+            },
+        },
+        "percent": {
+            "type": 1,         // 1=number, 2=bar, 3=both, 9=colored number
+            "color": {
+                "green": "green",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
+        }
+    }
+}
