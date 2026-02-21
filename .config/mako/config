@@ -1,10 +1,68 @@
-# duration in milliseconds
+# https://man.archlinux.org/man/mako.5.en
+
+# GLOBAL OPTIONS
+max-history=5
+
+
+# DEFAULT BINDINGS
+on-button-left=invoke-default-action
+on-button-middle=exec makoctl menu -n "$id" dmenu 'Select action: '
+on-button-right=dismiss --no-history
+on-touch=dismiss
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+
+# STYLE OPTIONS
+font=Geist Mono
+background-color=#161618ff
+text-color=#cdd6f4ff
+
+width=350
+height=180
+
+margin=5,5
+padding=8,13
+
+border-size=1
+border-color=#ffffff69
+border-radius=3
+
+progress-color=over #A6E3A1FF
+
+max-icon-size=96
+icon-location=left
+icon-border-radius=8
+
+markup=1
+actions=1
+history=1
+
+text-alignment=left
+
 default-timeout=5000
+ignore-timeout=1
 
-# max number of notifications shown at once
-max-visible=5
+group-by=app-name,summary
+max-visible=7
 
-# positioning
+output=HDMI-A-1
+layer=overlay
 anchor=top-right
-margin=10
+
+
+# GROUPED NOTIFICATIONS
+[grouped]
+format=(%g) <b>%s</b>\n%b
+text-alignment=center
+
+
+# CRITERIA EXAMPLE BLOCK
+# Example: Mail client notifications with custom behavior
+[app-name="thunderbird" actionable]
+on-button-left=invoke-action reply
+on-button-right=dismiss-group
+background-color=#313244FF
+border-color=#F38BA8FF
+default-timeout=0
+ignore-timeout=0
 

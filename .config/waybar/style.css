@@ -32,20 +32,22 @@ window#waybar {
     color: @active-element;
 }
 
+#workspaces button:hover {
+    color: #000000;
+}
+
 /* current window */
 #window {
     color: @active-element;
 }
 
-#battery {
-    color: @active-element;
-    padding: 0 20px;
-    font-size: 13px;
-}
-
+#pulseaudio,
+#network,
+#battery,
 #clock {
     color: @active-element;
     margin-right: 10px;
+    padding: 7px 10px;
 }
 
 /* Battery states */
